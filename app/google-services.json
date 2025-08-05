@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "142636587905",
+    "project_id": "fabiano-mello-resume",
+    "storage_bucket": "fabiano-mello-resume.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142636587905:android:070f4d1091310eab9fe680",
+        "android_client_info": {
+          "package_name": "app.birojow.fabianomelloresume"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGTcpa-SsLUJ6RgZ_byiKWltQJTH6SOsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
