@@ -1,3 +1,10 @@
+import org.gradle.kotlin.dsl.androidTestAnnotationProcessor
+import org.gradle.kotlin.dsl.androidTestImplementation
+import org.gradle.kotlin.dsl.annotationProcessor
+import org.gradle.kotlin.dsl.implementation
+import org.gradle.kotlin.dsl.testAnnotationProcessor
+import org.gradle.kotlin.dsl.testImplementation
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -5,6 +12,9 @@ plugins {
     id("com.google.gms.google-services")
     alias(libs.plugins.google.firebase.crashlytics)
     alias(libs.plugins.google.firebase.firebase.perf)
+    id("com.apollographql.apollo") version "4.3.2"
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -42,6 +52,12 @@ android {
     }
 }
 
+apollo {
+    service("service") {
+        packageName.set("app.birojow")
+    }
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -64,5 +80,19 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(platform("com.google.firebase:firebase-bom:34.0.0"))
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.apollo.runtime)
+    implementation(libs.hilt.android)
+    annotationProcessor(libs.hilt.compiler)
+    androidTestImplementation(libs.hilt.android.testing)
+    androidTestAnnotationProcessor(libs.google.hilt.compiler)
+    testImplementation(libs.google.hilt.android.testing)
+    testAnnotationProcessor(libs.com.google.dagger.hilt.compiler2)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.dotlottie.android)
+}
+
+kapt {
+    correctErrorTypes = true
 }
