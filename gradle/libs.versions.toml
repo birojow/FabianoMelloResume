@@ -2,7 +2,6 @@
 activityCompose = "1.10.1"
 agp = "8.9.0"
 appcompat = "1.7.1"
-apolloRuntime = "4.3.2"
 composeBom = "2025.07.00"
 coreKtx = "1.16.0"
 dotlottieAndroid = "0.5.0"
@@ -16,6 +15,7 @@ firebasePerf = "22.0.0"
 googleFirebaseCrashlytics = "3.0.6"
 googleFirebaseFirebasePerf = "2.0.1"
 googleServices = "4.4.3"
+graphql = "4.3.2"
 hiltAndroid = "2.57"
 hiltNavigationCompose = "1.2.0"
 junit = "4.13.2"
@@ -32,7 +32,7 @@ androidx-appcompat-resources = { module = "androidx.appcompat:appcompat-resource
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
-apollo-runtime = { module = "com.apollographql.apollo:apollo-runtime", version.ref = "apolloRuntime" }
+apollo-runtime = { module = "com.apollographql.apollo:apollo-runtime", version.ref = "graphql" }
 dotlottie-android = { module = "com.github.LottieFiles:dotlottie-android", version.ref = "dotlottieAndroid" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
@@ -67,3 +67,4 @@ google-firebase-firebase-perf = { id = "com.google.firebase.firebase-perf", vers
 google-dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+graphql = { id = "com.apollographql.apollo", version.ref = "graphql" }

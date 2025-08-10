@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.google.services)
     alias(libs.plugins.google.firebase.crashlytics)
     alias(libs.plugins.google.firebase.firebase.perf)
-    id("com.apollographql.apollo") version "4.3.2"
+    alias(libs.plugins.graphql)
     alias(libs.plugins.google.dagger.hilt.android)
     alias(libs.plugins.ksp)
 }
