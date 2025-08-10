@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Fabiano Mello Resume</string>
+    <string name="portugal_flag_emoji" translatable="false">🇵🇹</string>
+    <string name="spain_flag_emoji" translatable="false">🇪🇸</string>
+    <string name="great_britain_flag_emoji" translatable="false">🇬🇧</string>
+    <string name="portuguese_language" translatable="false">Português</string>
+    <string name="espanol_language" translatable="false">Español</string>
+    <string name="english_language" translatable="false">English</string>
 </resources>
