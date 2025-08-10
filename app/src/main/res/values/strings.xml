@@ -6,4 +6,5 @@
     <string name="portuguese_language" translatable="false">Português</string>
     <string name="espanol_language" translatable="false">Español</string>
     <string name="english_language" translatable="false">English</string>
+    <string name="test_string">Welcome</string>
 </resources>
