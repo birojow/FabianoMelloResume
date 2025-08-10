@@ -2,12 +2,12 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id("com.google.gms.google-services")
+    alias(libs.plugins.google.services)
     alias(libs.plugins.google.firebase.crashlytics)
     alias(libs.plugins.google.firebase.firebase.perf)
     id("com.apollographql.apollo") version "4.3.2"
-    kotlin("kapt")
-    id("com.google.dagger.hilt.android")
+    alias(libs.plugins.google.dagger.hilt.android)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -87,16 +87,12 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.apollo.runtime)
     implementation(libs.hilt.android)
-    annotationProcessor(libs.hilt.compiler)
+    ksp(libs.hilt.android.compiler)
     androidTestImplementation(libs.hilt.android.testing)
-    androidTestAnnotationProcessor(libs.google.hilt.compiler)
-    testImplementation(libs.google.hilt.android.testing)
-    testAnnotationProcessor(libs.com.google.dagger.hilt.compiler2)
+    androidTestAnnotationProcessor(libs.hilt.android.compiler)
+    testImplementation(libs.hilt.android.testing)
+    testAnnotationProcessor(libs.hilt.android.compiler)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.dotlottie.android)
-}
-
-kapt {
-    correctErrorTypes = true
 }
