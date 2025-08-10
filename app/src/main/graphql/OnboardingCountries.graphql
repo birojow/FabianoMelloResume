@@ -1,9 +1,0 @@
-query OnboardingCounties {
-    countries(filter: {code: {in: ["GB", "ES", "PT"]}}) {
-        emoji
-        languages {
-            code
-            native
-        }
-    }
-}
