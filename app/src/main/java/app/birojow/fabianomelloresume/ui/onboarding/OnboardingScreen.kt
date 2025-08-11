@@ -7,9 +7,12 @@ import androidx.compose.animation.core.updateTransition
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.Icon
@@ -86,6 +89,7 @@ private fun BoxScope.SwipeArrowsAnimation(modifier: Modifier = Modifier) {
     val alphaTransitionDurationInMillis = 300
     val rotationTransitionDurationInMillis = 4000
     val restingTime = 3000
+    val rotationStartingAngle = -35f
     var currentAnimationState by remember {
         mutableStateOf(SwipeAnimationState.INVISIBLE)
     }
@@ -126,8 +130,8 @@ private fun BoxScope.SwipeArrowsAnimation(modifier: Modifier = Modifier) {
         }
     ) {
         when(it) {
-            SwipeAnimationState.ROTATING -> -35f
-            SwipeAnimationState.INVISIBLE -> 35f
+            SwipeAnimationState.ROTATING -> rotationStartingAngle
+            SwipeAnimationState.INVISIBLE -> rotationStartingAngle.unaryMinus()
         }
     }
 
@@ -147,6 +151,7 @@ private fun BoxScope.SwipeArrowsAnimation(modifier: Modifier = Modifier) {
     Icon(
         modifier = modifier
             .align(Alignment.BottomCenter)
+            .windowInsetsPadding(WindowInsets.safeDrawing)
             .size(48.dp)
             .rotate(rotation),
         painter = painterResource(R.drawable.swipe_left),
