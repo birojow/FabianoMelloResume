@@ -2,15 +2,11 @@ package app.birojow.fabianomelloresume.ui.navigation
 
 import kotlinx.serialization.Serializable
 
-internal sealed interface Onboarding {
+sealed interface Route {
     @Serializable
-    data object LanguageSelectionScreen : Onboarding
+    data object LanguageSelectionScreen : Route
     @Serializable
-    data object OnboardingResumeScreen : Onboarding
+    data object OnboardingScreen : Route
     @Serializable
-    data object OnboardingGuestBookScreen : Onboarding
-    @Serializable
-    data object OnboardingActivitiesScreen : Onboarding
+    data object HomeScreen : Route
 }
-
-internal data object HomeScreen

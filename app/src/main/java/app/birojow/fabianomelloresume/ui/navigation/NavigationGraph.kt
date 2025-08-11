@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import app.birojow.fabianomelloresume.ui.onboarding.LanguageSelectionScreen
+import app.birojow.fabianomelloresume.ui.onboarding.OnboardingScreen
 
 @Composable
 fun NavigationGraph(showOnboarding: Boolean) {
@@ -14,27 +15,19 @@ fun NavigationGraph(showOnboarding: Boolean) {
 
     NavHost(
         navController = navController,
-        startDestination = if (showOnboarding) Onboarding.LanguageSelectionScreen else HomeScreen
+        startDestination = if (showOnboarding) Route.LanguageSelectionScreen else Route.HomeScreen
     ) {
-        composable<Onboarding.LanguageSelectionScreen> {
+        composable<Route.LanguageSelectionScreen> {
             LanguageSelectionScreen {
                 val appLocale: LocaleListCompat = LocaleListCompat
                     .forLanguageTags(it.name.lowercase())
                 AppCompatDelegate.setApplicationLocales(appLocale)
-                navController.navigate(Onboarding.OnboardingResumeScreen)
+                navController.navigate(Route.OnboardingScreen)
             }
         }
 
-        composable<Onboarding.OnboardingResumeScreen> {
-
-        }
-
-        composable<Onboarding.OnboardingGuestBookScreen> {
-
-        }
-
-        composable<Onboarding.OnboardingActivitiesScreen> {
-
+        composable<Route.OnboardingScreen> {
+            OnboardingScreen()
         }
     }
 }
