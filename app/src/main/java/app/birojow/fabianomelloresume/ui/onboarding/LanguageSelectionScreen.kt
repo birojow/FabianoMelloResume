@@ -20,7 +20,7 @@ import app.birojow.fabianomelloresume.domain.AppLanguage
 import app.birojow.fabianomelloresume.ui.theme.AppTheme
 
 @Composable
-internal fun LanguageSelectionScreen(
+fun LanguageSelectionScreen(
     modifier: Modifier = Modifier,
     onLanguageSelection: (AppLanguage) -> Unit
 ) {
