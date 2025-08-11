@@ -6,6 +6,7 @@ import androidx.core.os.LocaleListCompat
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import app.birojow.fabianomelloresume.ui.home.HomeScreen
 import app.birojow.fabianomelloresume.ui.onboarding.LanguageSelectionScreen
 import app.birojow.fabianomelloresume.ui.onboarding.OnboardingScreen
 
@@ -27,7 +28,13 @@ fun NavigationGraph(showOnboarding: Boolean) {
         }
 
         composable<Route.OnboardingScreen> {
-            OnboardingScreen()
+            OnboardingScreen {
+                navController.navigate(Route.HomeScreen)
+            }
+        }
+
+        composable<Route.HomeScreen> {
+            HomeScreen()
         }
     }
 }

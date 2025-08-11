@@ -10,11 +10,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeContent
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -38,7 +40,10 @@ import app.birojow.fabianomelloresume.ui.theme.AppTheme
 
 
 @Composable
-fun OnboardingScreen(modifier: Modifier = Modifier) {
+fun OnboardingScreen(
+    modifier: Modifier = Modifier,
+    onOnboardingFinished: () -> Unit
+) {
     val pagerState = rememberPagerState(
         pageCount = { OnboardingPage.entries.size }
     )
@@ -62,7 +67,17 @@ fun OnboardingScreen(modifier: Modifier = Modifier) {
                     }
                     OnboardingPage.THIRD.ordinal -> {
                         OnboardingText(OnboardingPage.THIRD)
-                        SwipeArrowsAnimation()
+                        Button(
+                            onClick = onOnboardingFinished,
+                            modifier = Modifier
+                                .windowInsetsPadding(WindowInsets.safeContent)
+                                .align(Alignment.BottomCenter)
+                        ) {
+                            Text(
+                                text = stringResource(R.string.onboarding_finish_button),
+                                style = MaterialTheme.typography.headlineSmall
+                            )
+                        }
                     }
                     else -> Unit
                 }
@@ -184,7 +199,7 @@ private fun SwipeArrowsAnimationPreview() {
 private fun OnboardingScreenLightEnPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen()
+            OnboardingScreen() {}
         }
     }
 }
@@ -197,7 +212,7 @@ private fun OnboardingScreenLightEnPreview() {
 private fun OnboardingScreenLightPtPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen()
+            OnboardingScreen() {}
         }
     }
 }
@@ -210,7 +225,7 @@ private fun OnboardingScreenLightPtPreview() {
 private fun OnboardingScreenLightEsPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen()
+            OnboardingScreen() {}
         }
     }
 }
@@ -223,7 +238,7 @@ private fun OnboardingScreenLightEsPreview() {
 private fun OnboardingScreenDarkEnPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen()
+            OnboardingScreen() {}
         }
     }
 }
@@ -236,7 +251,7 @@ private fun OnboardingScreenDarkEnPreview() {
 private fun OnboardingScreenDarkPtPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen()
+            OnboardingScreen() {}
         }
     }
 }
@@ -249,7 +264,7 @@ private fun OnboardingScreenDarkPtPreview() {
 private fun OnboardingScreenDarkEsPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen()
+            OnboardingScreen() {}
         }
     }
 }

@@ -9,4 +9,5 @@
     <string name="onboarding_page_one_text">This app is both a digital resume and a portfolio to showcase my Android development knowledge…</string>
     <string name="onboarding_page_two_text">…it also offers some cool and fun activities…</string>
     <string name="onboarding_page_three_text">…and it has a guest book. Maybe you\'ll find someone you know there!</string>
+    <string name="onboarding_finish_button" translatable="false">OK!</string>
 </resources>
