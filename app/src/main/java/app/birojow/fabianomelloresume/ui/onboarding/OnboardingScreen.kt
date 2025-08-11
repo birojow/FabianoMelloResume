@@ -199,7 +199,7 @@ private fun SwipeArrowsAnimationPreview() {
 private fun OnboardingScreenLightEnPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen() {}
+            OnboardingScreen {}
         }
     }
 }
@@ -212,7 +212,7 @@ private fun OnboardingScreenLightEnPreview() {
 private fun OnboardingScreenLightPtPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen() {}
+            OnboardingScreen {}
         }
     }
 }
@@ -225,7 +225,7 @@ private fun OnboardingScreenLightPtPreview() {
 private fun OnboardingScreenLightEsPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen() {}
+            OnboardingScreen {}
         }
     }
 }
@@ -238,7 +238,7 @@ private fun OnboardingScreenLightEsPreview() {
 private fun OnboardingScreenDarkEnPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen() {}
+            OnboardingScreen {}
         }
     }
 }
@@ -251,7 +251,7 @@ private fun OnboardingScreenDarkEnPreview() {
 private fun OnboardingScreenDarkPtPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen() {}
+            OnboardingScreen {}
         }
     }
 }
@@ -264,7 +264,7 @@ private fun OnboardingScreenDarkPtPreview() {
 private fun OnboardingScreenDarkEsPreview() {
     AppTheme {
         Surface {
-            OnboardingScreen() {}
+            OnboardingScreen {}
         }
     }
 }
