@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Currículo de Fabiano Mello</string>
-    <string name="onboarding_page_one_text">Este aplicativo é um currículo digital e um portfólio para mostrar meu conhecimento em desenvolvimento Android…</string>
-    <string name="onboarding_page_two_text">…também oferece algumas atividades legais e divertidas…</string>
-    <string name="onboarding_page_three_text">…e tem um livro de visitas. Quem sabe você encontra alguém conhecido lá!</string>
-</resources>

@@ -1,11 +1,5 @@
 <resources>
     <string name="app_name">Fabiano Mello Resume</string>
-    <string name="portugal_flag_emoji" translatable="false">🇵🇹</string>
-    <string name="spain_flag_emoji" translatable="false">🇪🇸</string>
-    <string name="great_britain_flag_emoji" translatable="false">🇬🇧</string>
-    <string name="portuguese_language" translatable="false">Português</string>
-    <string name="espanol_language" translatable="false">Español</string>
-    <string name="english_language" translatable="false">English</string>
     <string name="onboarding_page_one_text">This app is both a digital resume and a portfolio to showcase my Android development knowledge…</string>
     <string name="onboarding_page_two_text">…it also offers some cool and fun activities…</string>
     <string name="onboarding_page_three_text">…and it has a guest book. Maybe you\'ll find someone you know there!</string>
