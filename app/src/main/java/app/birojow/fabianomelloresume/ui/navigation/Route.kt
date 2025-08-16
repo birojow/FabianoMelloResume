@@ -6,6 +6,8 @@ sealed interface Route {
     @Serializable
     data object LoadingScreen : Route
     @Serializable
+    data object LanguageSelectionScreen
+    @Serializable
     data object OnboardingScreen : Route
     @Serializable
     data object HomeScreen : Route
