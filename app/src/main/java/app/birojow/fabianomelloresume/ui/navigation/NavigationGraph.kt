@@ -1,5 +1,7 @@
 package app.birojow.fabianomelloresume.ui.navigation
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -7,6 +9,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.datastore.preferences.core.edit
 import androidx.navigation.compose.NavHost
@@ -15,7 +19,6 @@ import androidx.navigation.compose.rememberNavController
 import app.birojow.fabianomelloresume.MainActivity
 import app.birojow.fabianomelloresume.dataStore
 import app.birojow.fabianomelloresume.ui.home.HomeScreen
-import app.birojow.fabianomelloresume.ui.loading.LoadingScreen
 import app.birojow.fabianomelloresume.ui.onboarding.OnboardingScreen
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.map
@@ -35,7 +38,7 @@ fun NavigationGraph() {
                 it[MainActivity.SHOW_ONBOARDING_KEY] ?: true
             }
             .collect {
-                delay(5000)
+                delay(1000)
                 showOnboarding = it
             }
     }
@@ -50,7 +53,13 @@ fun NavigationGraph() {
     ) {
         composable<Route.LoadingScreen> {
             if (showOnboarding == null) {
-                LoadingScreen()
+//                LoadingScreen()
+                Box(
+                    Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
+
+                }
             } else {
                 navController.navigate(
                     if (showOnboarding == true) {

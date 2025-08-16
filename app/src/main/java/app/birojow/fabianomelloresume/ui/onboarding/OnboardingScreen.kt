@@ -102,8 +102,8 @@ private fun BoxScope.OnboardingText(
 @Composable
 private fun BoxScope.SwipeArrowsAnimation(modifier: Modifier = Modifier) {
     val alphaTransitionDurationInMillis = 300
-    val rotationTransitionDurationInMillis = 4000
-    val restingTime = 3000
+    val restingDurationInMillis = 3000
+    val rotationTransitionDurationInMillis = 1500
     val rotationStartingAngle = -35f
     var currentAnimationState by remember {
         mutableStateOf(SwipeAnimationState.INVISIBLE)
@@ -135,10 +135,10 @@ private fun BoxScope.SwipeArrowsAnimation(modifier: Modifier = Modifier) {
         transitionSpec = {
             when {
                 SwipeAnimationState.ROTATING isTransitioningTo SwipeAnimationState.INVISIBLE -> {
-                    tween(rotationTransitionDurationInMillis)
+                    tween(restingDurationInMillis)
                 }
                 SwipeAnimationState.INVISIBLE isTransitioningTo SwipeAnimationState.ROTATING -> {
-                    tween(restingTime)
+                    tween(rotationTransitionDurationInMillis)
                 }
                 else -> tween(0)
             }
