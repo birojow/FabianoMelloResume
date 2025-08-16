@@ -1,11 +1,10 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.kotlin.android) apply false
-    alias(libs.plugins.kotlin.compose) apply false
-    alias(libs.plugins.google.services) apply false
-    alias(libs.plugins.google.firebase.crashlytics) apply false
-    alias(libs.plugins.google.firebase.firebase.perf) apply false
-    alias(libs.plugins.google.dagger.hilt.android) apply false
-    alias(libs.plugins.ksp) apply false
+    Plugin.values()
+        .filter { Module.PROJECT in it.modules }
+        .forEach { plugin ->
+            plugin.version?.let { version ->
+                id(plugin.packageName) version version apply plugin.apply
+            } ?: (id(plugin.packageName) apply plugin.apply)
+        }
 }

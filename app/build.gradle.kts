@@ -1,14 +1,11 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.google.services)
-    alias(libs.plugins.google.firebase.crashlytics)
-    alias(libs.plugins.google.firebase.firebase.perf)
-    alias(libs.plugins.graphql)
-    alias(libs.plugins.google.dagger.hilt.android)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.kotlin.serialization)
+    Plugin.values()
+        .filter { Module.APP in it.modules }
+        .forEach { plugin ->
+            plugin.version?.let { version ->
+                id(plugin.packageName) version version
+            } ?: id(plugin.packageName)
+        }
 }
 
 android {

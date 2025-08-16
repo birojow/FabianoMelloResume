@@ -23,4 +23,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Fabiano Mello Resume"
 include(":app")
- 
+include(":aboutme")
+include(":guestbook")
+include(":activities")
