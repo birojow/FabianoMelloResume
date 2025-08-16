@@ -43,7 +43,7 @@ fun NavigationGraph() {
     NavHost(
         navController = navController,
         startDestination = when(showOnboarding) {
-            true -> Route.LanguageSelectionScreen
+            true -> Route.OnboardingScreen
             false -> Route.HomeScreen
             else -> Route.LoadingScreen
         }
