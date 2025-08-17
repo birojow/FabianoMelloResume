@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.PluginDependenciesSpecScope
+
 enum class Plugin(
     val modules: List<Module>,
     val packageName: String,
@@ -23,13 +25,13 @@ enum class Plugin(
 
     ),
     KOTLIN_COMPOSE(
-        modules = listOf(Module.PROJECT, Module.APP),
+        modules = listOf(Module.PROJECT, Module.APP, Module.ABOUT_ME, Module.ACTIVITIES, Module.GUEST_BOOK),
         packageName = "org.jetbrains.kotlin.plugin.compose",
         version = Version.KOTLIN,
 
     ),
     GOOGLE_SERVICES(
-        modules = listOf(Module.PROJECT, Module.APP),
+        modules = listOf(Module.PROJECT, Module.APP, Module.ABOUT_ME, Module.ACTIVITIES, Module.GUEST_BOOK),
         packageName = "com.google.gms.google-services",
         version = Version.GOOGLE_SERVICES,
     ),
@@ -44,23 +46,33 @@ enum class Plugin(
         version = Version.GOOGLE_FIREBASE_PERF,
     ),
     DAGGER_HILT(
-        modules = listOf(Module.PROJECT, Module.APP),
+        modules = listOf(Module.PROJECT, Module.APP, Module.ABOUT_ME, Module.ACTIVITIES, Module.GUEST_BOOK),
         packageName = "com.google.dagger.hilt.android",
         version = Version.HILT_ANDROID,
     ),
     KSP(
-        modules = listOf(Module.PROJECT, Module.APP),
+        modules = listOf(Module.PROJECT, Module.APP, Module.ABOUT_ME, Module.ACTIVITIES, Module.GUEST_BOOK),
         packageName = "com.google.devtools.ksp",
         version = Version.KSP,
     ),
     GRAPHQL(
-        modules = listOf(Module.APP),
+        modules = listOf(Module.APP, Module.GUEST_BOOK),
         packageName = "com.apollographql.apollo",
         version = Version.GRAPHQL
     ),
     KOTLIN_SERIALIZATION(
-        modules = listOf(Module.APP),
+        modules = listOf(Module.APP, Module.ABOUT_ME, Module.ACTIVITIES, Module.GUEST_BOOK),
         packageName = "org.jetbrains.kotlin.plugin.serialization",
         version = Version.KOTLIN
     )
+}
+
+fun PluginDependenciesSpecScope.addPluginsForModule(module: Module) {
+    Plugin.values()
+        .filter { module in it.modules }
+        .forEach { plugin ->
+            plugin.version?.let { version ->
+                id(plugin.packageName).version(version)
+            } ?: id(plugin.packageName)
+        }
 }

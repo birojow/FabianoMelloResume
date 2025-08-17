@@ -1,11 +1,5 @@
 plugins {
-    Plugin.values()
-        .filter { Module.GUEST_BOOK in it.modules }
-        .forEach { plugin ->
-            plugin.version?.let { version ->
-                id(plugin.packageName) version version
-            } ?: id(plugin.packageName)
-        }
+    addPluginsForModule(Module.GUEST_BOOK)
 }
 
 android {
@@ -28,21 +22,27 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
+    }
+
+    buildFeatures {
+        compose = true
+    }
+}
+
+apollo {
+    service("service") {
+        packageName.set("app.birojow")
     }
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    addDependenciesForModule(Module.GUEST_BOOK)
 }
