@@ -3,22 +3,22 @@ plugins {
 }
 
 android {
-    namespace = "app.birojow.fabianomelloresume"
-    compileSdk = 35
+    namespace = ProjectConfig.NAMESPACE
+    compileSdk = ProjectConfig.COMPILE_SDK
 
     androidResources {
         generateLocaleConfig = true
     }
 
     defaultConfig {
-        applicationId = "app.birojow.fabianomelloresume"
-        minSdk = 26
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = ProjectConfig.NAMESPACE
+        minSdk = ProjectConfig.MIN_SDK
+        targetSdk = ProjectConfig.TARGET_SDK
+        versionCode = ProjectConfig.VERSION_CODE
+        versionName = ProjectConfig.VERSION_NAME
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        resConfigs("en", "es", "pt")
+        resConfigs(*ProjectConfig.RES_CONFIGS)
     }
 
     buildTypes {
@@ -32,12 +32,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = ProjectConfig.SOURCE_COMPATIBILITY
+        targetCompatibility = ProjectConfig.TARGET_COMPATIBILITY
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = ProjectConfig.JVM_TARGET
     }
 
     buildFeatures {
@@ -53,4 +53,7 @@ apollo {
 
 dependencies {
     addDependenciesForModule(Module.APP)
+    implementation(project(Module.ABOUT_ME.moduleName))
+    implementation(project(Module.ACTIVITIES.moduleName))
+    implementation(project(Module.GUEST_BOOK.moduleName))
 }

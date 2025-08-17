@@ -4,10 +4,10 @@ plugins {
 
 android {
     namespace = "app.birojow.activities"
-    compileSdk = 35
+    compileSdk = ProjectConfig.COMPILE_SDK
 
     defaultConfig {
-        minSdk = 26
+        minSdk = ProjectConfig.MIN_SDK
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -24,12 +24,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = ProjectConfig.SOURCE_COMPATIBILITY
+        targetCompatibility = ProjectConfig.TARGET_COMPATIBILITY
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = ProjectConfig.JVM_TARGET
     }
 
     buildFeatures {
