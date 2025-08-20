@@ -1,0 +1,440 @@
+{
+    "last_update": "2025-18-08T18:25:00Z",
+    "about_me": {
+        "name": "Fabiano Augusto de Mello",
+        "title": "Android Software Engineer",
+        "description": [
+            {
+                "paragraph": "I have over 4 years of experience building accessible and performant Android apps using Kotlin, Jetpack Compose, MVVM, Coroutines and a test-first mindset. My code impacts millions of users every day."
+            },
+            {
+                "paragraph": "I've been working on projects for Itaú, the largest bank in Latin America, developing credit related features that generated hundreds of millions in revenue."
+            },
+            {
+                "paragraph": "Working well with others across different teams, I help create great solutions. I'm always learning and have taken over 50 courses in the last 5 years to improve my skills and code. I communicate clearly to solve problems quickly and deliver consistently. I'm also good at spotting issues and finding ways to fix them to help projects succeed."
+            }
+        ]
+    },
+    "contact_info": {
+        "location": {
+            "city": "Indaiatuba",
+            "state": "São Paulo",
+            "country": "Brazil"
+        },
+        "phone": "+5519999358260",
+        "email": "f.augmello@hotmail.com",
+        "links": [
+            {
+                "resource": "Linkedin",
+                "url": "https://linkedin.com/in/fabiano-augusto-de-mello",
+                "logo": ""
+            },
+            {
+                "resource": "Medium",
+                "url": "https://medium.com/@birojow",
+                "logo": ""
+            }
+        ]
+   },
+    "technical_skills": [
+        {
+            "name": "Android SDK",
+            "in_app_usage": null,
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "Kotlin",
+            "in_app_usage": "This app was completely written in Kotlin. I can say that Kotlin is my second language.",
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "Kotlin Coroutines/Flows",
+            "in_app_usage": "Every request to the backend to fetch data and every animation in the app uses coroutines to do 2 or more things simultaneously.",
+            "logo": null,
+            "implementations": null
+        },
+        {
+            "name": "Jetpack Compose",
+            "in_app_usage": "All screens were crafted in Compose.",
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "MVVM/MVI",
+            "in_app_usage": "I use a mix of MVVM and MVI. A screen knows nothing about the related viewmodel. Each viewmodel exposes a single public method that handle a parameter of type T. The screen receive two parameters: a Compose State, and a callback (T) -> Unit, which calls the handler method from the viewmodel. T is a sealed interface mapping each possible action of the user for that screen.",
+            "logo": null,
+            "implementations": null
+        },
+        {
+            "name": "Gradle",
+            "in_app_usage": "I don't have a choice here, do I?",
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "Dependency injection",
+            "in_app_usage": "Retrofit apis are injected into repositories, repositories into usecases, usecases into viewmodels, and viewmodels into uis. Pretty regular stuff. I'm using Hilt, although I think Koin is easier.",
+            "logo": null,
+            "implementations": [
+                {
+                    "name": "Dagger Hilt",
+                    "logo": null
+                },
+                {
+                    "name": "Koin",
+                    "logo": ""
+                }
+            ]
+        },
+        {
+            "name": "Retrofit",
+            "in_app_usage": "I'm using Retrofit as HTTP client to fetch the information you're reading right now.",
+            "logo": null,
+            "implementations": null
+        },
+        {
+            "name": "SQL",
+            "in_app_usage": "With Room and SQL I'm caching the resume data. The next time you enter this screen, a HTTP request will be made to retrieve the timestamp of the last update of the resume in the server. If this timestamp is different from the timestamp cached, the cache will be invalidated and the resume will be downloaded again.",
+            "logo": null,
+            "implementations": [
+                {
+                    "name": "Room",
+                    "logo": null
+                }
+            ]
+        },
+        {
+            "name": "Unit testing",
+            "in_app_usage": "I'm testing all the critical logic in this app with unit tests.",
+            "logo": null,
+            "implementations": [
+                {
+                    "name": "JUnit",
+                    "logo""
+                }
+            ]
+        },
+        {
+            "name": "Mocking libraries",
+            "in_app_usage": "Can't make proper unit tests without mocking. I have used Mockito for many years, but lately I'm focusing on Mockk",
+            "logo": null,
+            "implementations": [
+                {
+                    "name": "Mockk",
+                    "logo": ""
+                },
+                {
+                    "name": "Mockito",
+                    "logo": null
+                }
+            ]
+        },
+        {
+            "name": "Espresso",
+            "in_app_usage": "End-to-end tests.",
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "Robolectric",
+            "in_app_usage": null,
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "XML",
+            "in_app_usage": null,
+            "logo": null,
+            "implementations": null
+        },
+        {
+            "name": "JSON",
+            "in_app_usage": "The resume data is sent from the server in JSON format.",
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "Git",
+            "in_app_usage": "Version control system.",
+            "logo": "",
+            "implementations": [
+                {
+                    "name": "Github",
+                    "logo": ""
+                },
+                {
+                    "name": "Gitlab",
+                    "logo": ""
+                }
+            ]
+        },
+        {
+            "name": "Firebase",
+            "in_app_usage": "I'm using Firebase to collect data about the app's performance and usage, and as database to store the guestbook entries.",
+            "logo": "",
+            "implementations": [
+                {
+                    "name": "Analytics",
+                    "logo": ""
+                },
+                {
+                    "name": "Crashlytics",
+                    "logo": ""
+                },
+                {
+                    "name": "Firestore",
+                    "logo": ""
+                },
+                {
+                    "name": "Performance monitoring",
+                    "logo": ""
+                }
+            ]
+        },
+        {
+            "name": "Rest API",
+            "in_app_usage": "The data fro this resume is served via a Rest API.",
+            "logo": null,
+            "implementations": null
+        },
+        {
+            "name": "GraphQL",
+            "in_app_usage": "A GraphQL is providing the names and flags of countries for the country selector in the guestbook.",
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "Clean Architecture",
+            "in_app_usage": "Every feature are structured following Clean Architecture's guidelines.",
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "SOLID Principles",
+            "in_app_usage": "",
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "Design Patterns",
+            "in_app_usage": "",
+            "logo": "",
+            "implementations": [
+                {
+                    "name": "State",
+                    "logo": null
+                }
+            ]
+        },
+        {
+            "name": "Agile methodologies",
+            "in_app_usage": null,
+            "logo": null,
+            "implementations": [
+                {
+                    "name": "Scrum",
+                    "logo": ""
+                }
+            ]
+        },
+        {
+            "name": "Jira",
+            "in_app_usage": null,
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "Android Studio",
+            "in_app_usage": "I'm a big fan of Android Studio. I use many of its features, like the profiler, live templates, structural search and replace, refactoring functions, and of course, the IdeaVim plugin.",
+            "logo": "",
+            "implementations": null
+        },
+        {
+            "name": "CI/CD",
+            "in_app_usage": "A Bitrise wokflow deploys the app in the Play Store wherever I merge a new version in the main branch.",
+            "logo": "",
+            "implementations": [
+                {
+                    "name": "Bitrise",
+                    "logo": ""
+                }
+            ]
+        }
+    ],
+    "work_experience": [
+        {
+            "company": "Zup Innovation",
+            "start_date": "06-2021",
+            "end_date": null,
+            "location": null,
+            "role": "Android Software Engineer",
+            "description": "Working in an agile team, I developed Android apps using Kotlin, Jetpack Compose and MVVM/Clean Architecture. Wrote tests using JUnit, Robolectric and Espresso. I participated in the elaboration of requirements with product managers, designers and SDETs, proposed improvements in daily processes, and shared knowledge and collaborated with other developers. Our users in debt needed assistance to restore thir financial balance and renegotiate their debts quickly. To address this, we implemented a renegotiation feature that takes around 5 minutes and generated R$ 600 million of revenue in the first quarter and achieved a user satisfacion rate of 93%.",
+            "website_url": "https://www.zup.com.br/sobre/",
+            "logo": ""
+        },
+        {
+            "company": "Flex",
+            "start_date": "09-2016",
+            "end_date": "07-2020",
+            "location": {
+                "city": "Jaguariuna",
+                "state": "Sao Paulo",
+                "country": "Brazil"
+            },
+            "role": "Electronics Technician",
+            "description": "I worked in the manufacture of Motorola and Lenovo mobile phone devices, analyzing failures in electronic circuits at a rate of 4analysis per hour. To replace RadioComm, an obsolete Motorola software used in day-to-day analysis by technicians, I develooped my own telephone service software.",
+            "website_url": "https://www.flex.com/company#about-us",
+            "logo": ""
+        },
+        {
+            "company": "Petrobras",
+            "start_date": "07-2008",
+            "end_date": "01-2015",
+            "location": {
+                "city": "Paulinia",
+                "state": "Sao Paulo",
+                "country": "Brazil"
+            },
+            "role": "Operations Technician",
+            "description": "Operation of tanks, pipelines, pumps and other oil processing equipments, flare stacks and treatment of industrial waste.",
+            "website_url": "https://www.petrobras.com.br/",
+            "logo": ""
+        }
+    ],
+    "education": [
+        {
+            "field_of_study": "Analysis and development of software systems",
+            "degree": "Associate",
+            "school": "Unifavip Wyden",
+            "start_year": "2020",
+            "end_year": "2022",
+            "certificate_url": "",
+            "school_website_url": "https://www.wyden.com.br/quem-somos",
+            "school_logo": ""
+        },
+        {
+            "field_of_study": "Electronics",
+            "degree": "Associate",
+            "school": "Escola Arquimedes",
+            "start_year": "2006",
+            "end_year": "2007",
+            "certificate_url": "",
+            "school_website_url": "https://www.arquimedes.com.br/novosite/quem-somos/#top",
+            "school_logo": ""
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "proficiency_level": "B2"
+        },
+        {
+            "language": "Portuguese",
+            "proficiency_level": "C2"
+        },
+        {
+            "language": "Spanish",
+            "proficiency_level": "C1"
+        }
+    ],
+    "professional_development": [
+        {
+            "course_name": "Kotlin Corotines & Flows Masterclass",
+            "organization": "PL Coding",
+            "end_date": "2025",
+            "certificate_url": "https://files.mspotcdn.de/schools%2FNRYaO8KduDTG8m2REJmk%2FuserData%2FDMbAqhO9ZzMg9cQDP9jNk4cpaCC2%2F1747524596931_YsfmBAvp1IqBKd23MzHg.pdf?alt=media&token=073a9719-f71a-484c-aece-0a472735bfbe"
+        },
+        {
+            "course_name": "Mastering Testing of Industry-Level Android Apps",
+            "organization": "PL Coding",
+            "end_date": "2024",
+            "certificate_url": "https://files.mspotcdn.de/schools%2FNRYaO8KduDTG8m2REJmk%2FuserData%2FDMbAqhO9ZzMg9cQDP9jNk4cpaCC2%2F1750612361758_lno4hWsOf5ah24hlybZz.pdf?alt=media&token=fae328ae-8e52-44e8-a84d-7cfa151ab397"
+        },
+        {
+            "course_name": "Gradle Build Caching",
+            "organization": "Gradle Inc.",
+            "end_date": "2024",
+            "certificate_url": "https://s3.amazonaws.com/schoolkeep-production/certificates/6633d0b1-c8c5-4365-b92e-1f1d7a13693f/DPE_University-Gradle_Build_Caching-Certificate.pdf"
+        }
+        {
+            "course_name": "Professional App Development with CI/CD",
+            "organization": "PL Coding",
+            "end_date": "2022",
+            "certificate_url": "https://files.mspotcdn.de/schools%2FNRYaO8KduDTG8m2REJmk%2FuserData%2FDMbAqhO9ZzMg9cQDP9jNk4cpaCC2%2F1750612803158_2FPpyw5W1tp9VjiyTM4v.pdf?alt=media&token=e0a831b0-bd8a-46b6-9fa9-d120bbb1e974"
+        },
+        {
+            "course_name": "Building Industry-Level Apps with Multi-Module Architecture",
+            "organization": "PL Coding",
+            "end_date": "2022",
+            "certificate_url": "https://files.mspotcdn.de/schools%2FNRYaO8KduDTG8m2REJmk%2FuserData%2FDMbAqhO9ZzMg9cQDP9jNk4cpaCC2%2F1750613103489_NiZ0Y4eq2r9Rznu9ScQf.pdf?alt=media&token=3bc98970-e5dc-40c1-a1f2-875b95e17174"
+        },
+        {
+            "name": "UML Data Modeling (Object-Oriented Analysis and Design)",
+            "organization": "Udemy",
+            "end_date": "2022",
+            "certificate_url": "https://www.udemy.com/certificate/UC-8a227a5f-f97b-48fa-af09-d44f37699b29/"
+        },
+        {
+            "course_name": "380 hours of courses about Android, Kotlin, Git, SQL, TDD, SOLID principles and Clean Code",
+            "organization": "Alura",
+            "end_date": "2021",
+            "certificate_url": "https://cursos.alura.com.br/user/fabiano-mello/fullCertificate/b02bbbe71f2e60641c93dbda000e2009"
+        },
+        {
+            "course_name": "Kotlin for Java Developers",
+            "organization": "JetBrains/Coursera",
+            "end_date": "2021",
+            "certificate_url": "https://coursera.org/share/472d67d47317199883fb2e05768d95b0"
+        },
+        {
+            "course_name": "CS50's Introduction to Computer Science",
+            "organization": "HarvardX/edX",
+            "end_date": "2020",
+            "certificate_url": "https://courses.edx.org/certificates/f698bce5beef439bbdca15233a14b33f"
+        }
+    ],
+    "projects": [
+        {
+            "name": "iti",
+            "logo": "",
+            "company": "Itaú (outsourced)",
+            "description": [
+                {
+                    "paragraph": "Digital bank from Itaú, with more than 20 million users. I was an Android engineer in the credit card team."
+                }
+            ],
+            "links": [
+                {
+                    "resource": "app",
+                    "url": "https://play.google.com/store/apps/details?id=com.itau.iti&hl=en"
+                },
+                {
+                    "resource": "website",
+                    "url": "https://iti.itau/"
+                }
+            ]
+        },
+        {
+            "name": "Itaú Emps",
+            "logo": "",
+            "company": "Itaú (outsourced)",
+            "description": [
+                {
+                    "paragraph": "New digital bank and financial advisor for small business owners from Itaú. I'm an Android engineer and worked with several teams, like account creation, account management, credit card, debt renegotiation and revolving credit."
+                }
+            ],
+            "links": [
+                {
+                    "resource": "app",
+                    "url": "https://play.google.com/store/apps/details?id=com.itau.pme.emps&hl=en"
+                },
+                {
+                    "resource": "website",
+                    "url": "https://www.itau.com.br/emps"
+                }
+            ]
+        }
+    ]
+}
